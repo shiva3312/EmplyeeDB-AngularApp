@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <app-employee-list></app-employee-list>
+        </div>
+        <div class="col">
+            <app-employee-details *ngIf="detailStatus === 1"></app-employee-details>
+            <app-updateform
+                *ngIf="detailStatus === 2"                
+            ></app-updateform>
+        </div>
+    </div>
+</div>

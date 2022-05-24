@@ -1,0 +1,45 @@
+
+<div class="container">
+    <div class="row">
+        <h1 class="display-6">Update Info</h1>
+        <hr class="mb-5">
+    </div>
+    <div class="row">
+        
+        <div class="col">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="firstName" 
+                    placeholder="First Name"
+                    value = "{{currEmployee.firstName}}"
+                    #firstName
+                    >
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="lastName" 
+                    placeholder="Last Name"
+                    value="{{currEmployee.lastName}}"
+                    #lastName
+                    >
+            </div>
+        </div>
+        <div class=" text-end">       
+        </div> 
+       
+        <button 
+        type="submit" 
+        class="btn btn-primary mt-2 btn-sm" 
+        (click)="addEmployee(firstName.value, lastName.value)"
+    >Update</button>
+    </div> 
+     
+</div>
