@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container">
   <app-header (stateSelected)="updateState($event)"></app-header>
-  <div>
+  <div >
     <app-home *ngIf="selectedState === 'home'"></app-home>
     <app-about  *ngIf="selectedState === 'about'"></app-about>
   </div>

@@ -8,7 +8,7 @@ import { employee } from 'src/app/shared/employee.model';
 })
 export class UpdateformComponent implements OnInit ,DoCheck {
 
-  currEmployee :employee ={id:0, firstName:'' , lastName:''};
+  currEmployee :any;
 
   constructor(private empoyeeService :EmployeeService) { }
 
@@ -18,9 +18,25 @@ export class UpdateformComponent implements OnInit ,DoCheck {
 
   ngOnInit(): void {  }
 
-  addEmployee(firstName:string , lastName:string){
+  addEmployee(
+    firstName:string , 
+    lastName:string,
+    city:string ,
+    district:string, 
+    state:string,
+    gender:string
+    
+    ){
     const id = this.empoyeeService.selectedId;
-    const newEmployee = new employee(id, firstName , lastName);
+    const newEmployee = new employee(
+      id, 
+      firstName , 
+      lastName,
+      state,
+      district ,
+      city  ,
+      gender
+      );
     this.empoyeeService.updateEmployee(id , newEmployee);
     
   }

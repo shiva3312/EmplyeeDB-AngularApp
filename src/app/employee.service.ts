@@ -1,9 +1,18 @@
 import { employee } from "./shared/employee.model";
 export class EmployeeService{
 
-    employees: employee[] = [new employee(0,'shivam' , 'chaurasiya')];
+    employees: employee[] = [new employee(
+        0, 
+      'Shivam' , 
+      'Chaurasiya',
+      'Uttar Pradesh',
+      'jaunpur' ,
+      'Badshahpur' ,
+      'Male'
+    
+    )];
     detailStatus :number = 0;
-    selectedEmpoyee :employee ={id:0 , firstName:'' , lastName:''}
+    selectedEmpoyee :any;
     selectedId:number =0;
     addEmployee(newEmp : employee){
         this.employees.push(newEmp);

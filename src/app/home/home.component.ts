@@ -13,9 +13,25 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addEmployee(firstName:string , lastName:string){
+  addEmployee(
+    firstName:string , 
+    lastName:string,
+    state: string,
+    district :string,
+    city : string ,
+    gender : string ,
+    ){
     const id = this.empoyeeService.employees.length;
-    const newEmployee = new employee(id,firstName , lastName );
+    const newEmployee = new employee(
+      id,
+      firstName , 
+      lastName ,
+      city  ,
+      district,      
+      state,    
+      gender
+      
+      );
     this.empoyeeService.addEmployee(newEmployee);
     
   }

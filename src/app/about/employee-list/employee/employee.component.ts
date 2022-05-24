@@ -9,7 +9,7 @@ import { employee } from 'src/app/shared/employee.model';
 })
 export class EmployeeComponent implements OnInit {
   @Input() selectedId : number = 0;
-  @Input() employee:employee = {id:0, firstName:'' , lastName:''};
+  @Input() employee:any;
   ngOnInit(): void { }
   constructor(private empoyeeService: EmployeeService){}
   

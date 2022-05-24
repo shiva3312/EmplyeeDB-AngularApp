@@ -9,7 +9,7 @@ import { employee } from 'src/app/shared/employee.model';
 })
 export class EmployeeDetailsComponent implements OnInit, DoCheck {
  
-  employee : employee = {id:0,firstName:'' , lastName:''};
+  employee : any;
   constructor(private empoyeeService : EmployeeService) { }
 
   ngDoCheck(): void {
